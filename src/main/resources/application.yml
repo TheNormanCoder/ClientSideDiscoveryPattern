@@ -1,17 +1,4 @@
-server:
-  port: 8762
-
 spring:
-  application:
-    name: eureka-server
   freemarker:
     template-loader-path: classpath:/templates/
     prefer-file-system-access: false
-
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-    enableSelfPreservation: false
