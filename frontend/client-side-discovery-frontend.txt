@@ -1,0 +1,47 @@
+// File: ServiceDiscoveryClient.js
+// Questo è un client JavaScript che implementa il pattern di client-side discovery
+
+
+// ---------------------------------------------------
+// File: ProductService.js
+// Un wrapper del servizio che utilizza ServiceDiscoveryClient
+
+
+
+export default App;
+
+// ---------------------------------------------------
+// NOTA: In una implementazione reale si potrebbero usare anche librerie come Eureka JS Client
+// che semplificano l'integrazione con Eureka e implementano funzionalità aggiuntive.
+
+// Esempio di alternativa usando eureka-js-client (da installare con npm):
+// Questa è solo per riferimento, non fa parte dell'implementazione sopra.
+
+/*
+import { Eureka } from 'eureka-js-client';
+
+// Configurazione del client Eureka
+const client = new Eureka({
+  instance: {
+    app: 'frontend-app',
+    hostName: 'localhost',
+    ipAddr: '127.0.0.1',
+    port: 3000,
+    vipAddress: 'frontend-app',
+    dataCenterInfo: {
+      name: 'MyOwn'
+    }
+  },
+  eureka: {
+    host: 'service-registry-host',
+    port: 8761,
+    servicePath: '/eureka/apps/'
+  }
+});
+
+// Avvio del client
+client.start();
+
+// Per ottenere le istanze
+const instances = client.getInstancesByAppId('PRODUCT-SERVICE');
+*/
