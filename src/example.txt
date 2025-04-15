@@ -1,0 +1,77 @@
+// Esempio di implementazione del Client-Side Discovery Pattern con Spring Cloud e Netflix Eureka
+
+// 1. Configurazione del Service Registry (Eureka Server)
+// File: org.config.EurekaServerApplication.java
+
+
+
+// application.yml per Eureka Server
+/*
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+*/
+
+// 2. Configurazione del Service Provider (registrato con Eureka)
+// File: org.ProductServiceApplication.java
+
+
+
+// application.yml per Product Service
+/*
+spring:
+  application:
+    name: product-service
+server:
+  port: 0  # Porta random per poter avviare multiple istanze
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${random.value}
+*/
+
+// 3. Implementazione del Client-Side Discovery Pattern
+// File: org.OrderServiceApplication.java
+package com.example.orderservice;
+
+
+
+// File: org.api.OrderController.java (client che usa il client-side discovery)
+package com.example.orderservice.controller;
+
+
+
+// application.yml per Order Service
+/*
+spring:
+  application:
+    name: order-service
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+*/
+
+// Dipendenze da aggiungere al pom.xml
+/*
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+</dependency>
+*/

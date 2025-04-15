@@ -42,15 +42,15 @@ Il flusso operativo è il seguente:
 // Service Provider
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ProductServiceApplication {
+public class org.ProductServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ProductServiceApplication.class, args);
+        SpringApplication.run(org.ProductServiceApplication.class, args);
     }
 }
 
 // Client
 @RestController
-public class OrderController {
+public class org.api.OrderController {
     
     @Autowired
     private RestTemplate restTemplate;
