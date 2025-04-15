@@ -3,8 +3,8 @@
 // Componente React che utilizza il client per la discovery
 
 import React, { useState, useEffect } from 'react';
-import ServiceDiscoveryClient from './ServiceDiscoveryClient';
-import ProductService from './ProductService';
+import ServiceDiscoveryClient from './services/ServiceDiscoveryClient';
+import ProductService from './services/ProductService';
 
 const App = () => {
     const [products, setProducts] = useState([]);
@@ -50,3 +50,5 @@ const App = () => {
         </div>
     );
 };
+
+export default App;

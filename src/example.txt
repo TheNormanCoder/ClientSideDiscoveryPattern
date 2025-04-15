@@ -1,7 +1,7 @@
 // Esempio di implementazione del Client-Side Discovery Pattern con Spring Cloud e Netflix Eureka
 
 // 1. Configurazione del Service Registry (Eureka Server)
-// File: org.config.EurekaServerApplication.java
+// File: config.org.EurekaServerApplication.java
 
 
 
@@ -45,7 +45,7 @@ package com.example.orderservice;
 
 
 
-// File: org.api.OrderController.java (client che usa il client-side discovery)
+// File: api.org.OrderController.java (client che usa il client-side discovery)
 package com.example.orderservice.controller;
 
 

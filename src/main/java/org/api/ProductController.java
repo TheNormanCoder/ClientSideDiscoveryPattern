@@ -1,6 +1,6 @@
 package org.api;
 
-// File: org.api.ProductController.java
+// File: api.org.ProductController.java
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

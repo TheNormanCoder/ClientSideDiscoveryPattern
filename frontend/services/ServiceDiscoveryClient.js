@@ -71,3 +71,5 @@ class ServiceDiscoveryClient {
         }
     }
 }
+
+export default ServiceDiscoveryClient;

@@ -141,6 +141,14 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.config.EurekaServerApplication</mainClass>
+                    <!-- resto della configurazione -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

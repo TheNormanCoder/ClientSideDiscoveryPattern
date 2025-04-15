@@ -50,7 +50,7 @@ public class org.ProductServiceApplication {
 
 // Client
 @RestController
-public class org.api.OrderController {
+public class api.org.OrderController {
     
     @Autowired
     private RestTemplate restTemplate;
